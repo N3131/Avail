@@ -1,0 +1,112 @@
+@mixin noEditCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #cacaca, $alpha: 1.0);
+    height: 100%;
+}
+
+.stageTable tbody {
+    tr:hover {
+       background-color: transparent !important;
+     }
+     td {
+       background-color: rgba($color: #ebebeb, $alpha: 0);
+       transition: 1s;
+       border-right: 1px solid #e3e3e3;
+     }
+     td:hover {
+       background-color: rgba($color: #ebebeb, $alpha: 1.0);
+     }
+   }
+
+   .stageTable {
+     font-family: sans-serif;
+     font-size: 14px;
+     padding: 0;
+   }
+
+   .stageTableRemoveCol {
+    max-width: 100px;
+  }
+   .stageTableRemove {
+     margin: 0 5px 13px 0;
+   }
+
+   .stageTableRemove:first-child {
+    margin-top: 63px;
+   }
+
+   .stageTableTopRow {
+     border-bottom: $stageTableBorder;
+     display: block;
+     width: 100%;
+   }
+
+   .stageTableTopRow > * {
+     border-right: $stageTableBorder;
+     text-align: center;
+     display: inline-block;
+   }
+
+   .stageTableTopRow > *:nth-child(1) {
+     margin-left: 28%;
+     border-left: $stageTableBorder;
+     width: 14%;
+   }
+   .stageTableTopRow > *:nth-child(2) {
+     margin: 0;
+     width: 22%;
+   }
+   .stageTableTopRow > *:nth-child(3) {
+     width: 21%;
+   }
+
+   .stageTableRows {
+       text-align: center;
+   }
+
+   .stageTableRows:last-child td > div {
+    @include noEditCell;
+   }
+
+   .stageTableRows .stageUneditableCell {
+    @include noEditCell;
+   }
+
+   td input {
+    width: 100%;
+   }
+
+   .tableCellValid {
+     border: 2px solid red;
+     padding: 12px;
+   }
+   .tableCellValidEdit {
+    border: 2px solid red;
+  }
+  .selectedCell {
+    outline: 2px solid #52ade0;
+    border-left: 2px solid #52ade0;
+  }
+  .notificationPopup {
+    background-color: white;
+    box-shadow: none;
+  }
+   input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+    padding: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
